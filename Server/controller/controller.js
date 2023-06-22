@@ -21,7 +21,7 @@ async function get_Category(req, res) {
     return res.json(data);
 }
 
-//post: https://localhost:8080/api/tarnsaction
+//post: https://localhost:8080/api/transaction
 async function create_Transaction(req, res) {
 
     if(!req.body) return res.status(400).json("Port HTTP Data not Provoded");
