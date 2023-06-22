@@ -11,7 +11,7 @@ routes.route('/api/categories')
 
 // export server using module
 
-routes.route('/api/transaction')
+routes.route('/api/transactions')
    .post(controller.create_Transaction)
    .get(controller.get_Transaction)
    
@@ -19,3 +19,4 @@ routes.route('/api/labels')
    .get(controller.get_Labels)
 
 module.exports=routes;
+ 
