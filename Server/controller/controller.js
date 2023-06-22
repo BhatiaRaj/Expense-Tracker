@@ -21,7 +21,7 @@ async function get_Category(req, res) {
     return res.json(data);
 }
 
-//post: https://localhost:8080/api/transaction
+//post: https://localhost:8080/api/transactions
 async function create_Transaction(req, res) {
 
     if(!req.body) return res.status(400).json("Port HTTP Data not Provoded");
@@ -42,13 +42,13 @@ async function create_Transaction(req, res) {
     })
 }
 
-//  get: http://localhost:8080/api/transaction
+//  get: http://localhost:8080/api/transactions
 async function get_Transaction(req, res){
     let data = await model.Transaction.find({});
     return res.json(data);
 }
 
-//  delete: http://localhost:8080/api/transaction
+//  delete: http://localhost:8080/api/transactions
 async function delete_Transaction(req, res){
     if (!req.body) res.status(400).json({ message: "Request body not Found"});
     await model.Transaction.deleteOne(req.body, function(err){
